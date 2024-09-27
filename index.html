@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
+
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.30/"></script>
+
+    <script>
+      require([
+        "esri/config",
+        "esri/WebMap",
+        "esri/views/MapView",
+        "esri/widgets/ScaleBar",
+        "esri/widgets/Legend"
+    ], function(esriConfig, WebMap, MapView, ScaleBar, Legend) {
+        
+        // esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurI9-UM0WWORNzS5cN-mttMBfbBtyzrrcxLsK9063DVkYot1mkPeJCs-Z1WTyhEfxhHJifX4YqlQzGHJX7fKW7MNONIh__zGFToVlvqL1Xj--zncG_9RXLYVNLRjiPs9rYhQM8YsgrtBhereSxlPCh_hr_r2Wxu9ak9hi1pgoW6nXDdxUYOZiyNYO3moXoPEpWWcjzlHfF5bYE1gKJues418.AT1_P7Ur7ON0";
+
+        const webmap = new WebMap({
+            portalItem: {
+            id: "13fecc06fb7147d5ae82c67193e0414e"
+            }
+        });
+
+        const view = new MapView({
+
+          container: "viewDiv", // Div element
+          map: webmap
+        });
+        
+      });
+      
+    </script>
+
+  </head>
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to ArcGIS JS API</title>
+    <style>
+        html,
+        body{
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+        }
+    </style>
+    <link 
+        rel="stylesheet" 
+        href="https://js.arcgis.com/4.30/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.30/"></script>
+</head>
+<body>
+    <script src="script.js"></script>
+    <div id="viewDiv"></div>
+</body>
+</html> -->
